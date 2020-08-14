@@ -28,6 +28,6 @@ class Events(private val plugin: DicePlugin): Listener {
 
         plugin.dMap[event.player.uniqueId] = event.message.toInt()
         event.player.sendMessage("${plugin.prefix}${event.message.toInt()}を登録しました。")
-        event.isCancelled
+        event.isCancelled = true
     }
 }
